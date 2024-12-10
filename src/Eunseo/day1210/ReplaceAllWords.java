@@ -7,4 +7,14 @@ if-else 문을 사용하여 구현하세요.
 package Eunseo.day1210;
 
 public class ReplaceAllWords {
+    public String replaceAllWords(String original, String target, String replacement) {
+        original = original.toLowerCase();
+        original = original.replaceAll(target, replacement);
+        return original;
+    }
+
+    public static void main(String[] args) {
+        ReplaceAllWords rp = new ReplaceAllWords();
+        System.out.println(rp.replaceAllWords("I like cat. Cat is cute.", "cat", "dog"));
+    }
 }
