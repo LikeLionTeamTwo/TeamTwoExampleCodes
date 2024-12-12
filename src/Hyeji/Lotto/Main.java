@@ -4,15 +4,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
-    static ArrayList<Gameable> games = new ArrayList<>();
-    static Scanner scanner = new Scanner(System.in);
+public final class Main {
+    private final ArrayList<Gameable> games;
+    private final Scanner scanner;
 
-    public static void main(String[] args) {
-        Main.startProgram();
+    public Main() {
+        this.games = new ArrayList<>();
+        this.scanner = new Scanner(System.in);
     }
 
-    public static void startProgram() {
+    public static void main(String[] args) {
+        Main main = new Main();
+        main.startProgram();
+    }
+
+    public void startProgram() {
         setGames();
         try {
             int selectedGameIndex = (scanner.nextInt() - 1);
@@ -25,7 +31,7 @@ public class Main {
         }
     }
 
-    private static void setGames() {
+    private void setGames() {
         for (Game game : Arrays.asList(Game.values())) {
             System.out.println(game.asIndex() + ". " + game.asGameName());
             games.add(game.asGameable());

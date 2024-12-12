@@ -1,6 +1,6 @@
 package Hyeji.Lotto;
 
-public class ExampleGame implements Gameable {
+public final class ExampleGame implements Gameable {
     public static void main(String[] args) {}
 
     @Override

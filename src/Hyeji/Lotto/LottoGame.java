@@ -2,7 +2,7 @@ package Hyeji.Lotto;
 
 import java.util.Scanner;
 
-public class LottoGame implements Gameable {
+public final class LottoGame implements Gameable {
     Scanner scanner = new Scanner(System.in);
     LottoGenerator generator = new LottoGenerator();
 
