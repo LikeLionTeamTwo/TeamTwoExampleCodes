@@ -20,7 +20,7 @@ public class Main {
 
     private static void setGames() {
         for (Game game : Arrays.asList(Game.values())) {
-            System.out.print(game.asIndex() + ". " + game.asGameName() + "\n");
+            System.out.println(game.asIndex() + ". " + game.asGameName());
             games.add(game.asGameable());
         }
         System.out.print("원하는 게임 번호를 입력하세요.: ");
