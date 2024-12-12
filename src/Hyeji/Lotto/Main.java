@@ -14,21 +14,15 @@ public class Main {
 
     public static void startProgram() {
         setGames();
-        printIntro();
         Gameable selectedGame = games.get(scanner.nextInt() - 1);
         selectedGame.startGame();
     }
 
-    private static void printIntro() {
-        Arrays.asList(Game.values()).forEach(
-                game -> System.out.print(game.asIndex() + ". " + game.asGameName() + "\n")
-        );
-        System.out.print("원하는 게임 번호를 입력하세요.: ");
-    }
-
     private static void setGames() {
-        Arrays.asList(Game.values()).forEach(
-                game -> games.add(game.asGameable())
-        );
+        for (Game game : Arrays.asList(Game.values())) {
+            System.out.print(game.asIndex() + ". " + game.asGameName() + "\n");
+            games.add(game.asGameable());
+        }
+        System.out.print("원하는 게임 번호를 입력하세요.: ");
     }
 }
