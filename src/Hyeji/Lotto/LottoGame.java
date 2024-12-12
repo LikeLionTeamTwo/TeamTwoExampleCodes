@@ -2,16 +2,14 @@ package Hyeji.Lotto;
 
 import java.util.Scanner;
 
-public class LottoMain {
+public class LottoGame implements Gameable {
     Scanner scanner = new Scanner(System.in);
     LottoGenerator generator = new LottoGenerator();
 
-    public static void main(String[] args) {
-        LottoMain main = new LottoMain();
-        main.startGame();
-    }
+    public static void main(String[] args) {}
 
-    private void startGame() {
+    @Override
+    public void startGame() {
         System.out.print("얼마 해 드려요?: ");
         int money = scanner.nextInt();
 
