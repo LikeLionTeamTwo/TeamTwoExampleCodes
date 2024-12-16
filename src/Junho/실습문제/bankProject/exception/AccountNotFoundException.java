@@ -10,5 +10,4 @@ public class AccountNotFoundException extends BankException{
         super(message);
     }
 
-
 }

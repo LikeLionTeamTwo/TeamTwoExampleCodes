@@ -116,8 +116,6 @@ public class Main {
         System.out.println();
         return selectedNum;
     }
-
-
     public static void main(String[] args) {
         Main main = new Main();
         Bank bank = new Bank("라이온");
