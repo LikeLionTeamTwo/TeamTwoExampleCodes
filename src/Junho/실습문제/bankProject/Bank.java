@@ -18,7 +18,7 @@ public class Bank {
 
     public void addCustomer(Customer customer) throws BankOperationException {
         for (int i = 0; i < this.customerTop; i++) {
-            if(this.customers[i].getName().equals(customer.getName())){
+            if(this.customers[i].getId().equals(customer.getId())){
                 throw new BankOperationException("중복된 아이디가 있습니다.");
             }
         }
