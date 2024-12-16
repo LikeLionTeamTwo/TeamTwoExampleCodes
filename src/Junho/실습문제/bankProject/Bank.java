@@ -9,9 +9,10 @@ public class Bank {
     private String name;
     private Customer[] customers;
     private int customerTop;
+    private final static int CUSTOMER_MAX = 100;
 
     public Bank(String name ) {
-        this.customers = new Customer[100];
+        this.customers = new Customer[CUSTOMER_MAX];
         this.name = name;
         this.customerTop = 0;
     }
