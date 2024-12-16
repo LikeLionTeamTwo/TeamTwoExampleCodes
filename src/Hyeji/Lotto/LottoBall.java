@@ -1,6 +1,6 @@
 package Hyeji.Lotto;
 
-public class LottoBall {
+public final class LottoBall {
     private int number;
 
     public LottoBall(int number) {
