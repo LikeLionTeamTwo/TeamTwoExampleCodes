@@ -15,6 +15,7 @@ public class Main {
         while(selectedNum != 6){
             try{
                 selectedNum = menu(sc);
+                sc.nextLine();
                 if(selectedNum == 1){ //고객 등록
                     addCustomer(sc, bank);
                 } else if(selectedNum == 2){ // 계좌 생성
@@ -61,7 +62,6 @@ public class Main {
     }
     //find Account
     public Account findAccount(Scanner sc, Bank bank){
-        sc.nextLine();
         try {
             System.out.print("고객 id를 입력하세요: ");
             String customerId = sc.nextLine();
@@ -75,7 +75,6 @@ public class Main {
         return null;
     }
     public void createAccount(Scanner sc, Bank bank)  {
-        sc.nextLine();
         System.out.println("계좌 생성을 시작합니다. !");
         System.out.print("고객 id를 입력하세요: ");
         String id = sc.nextLine();
@@ -91,7 +90,6 @@ public class Main {
         }
     }
     public Customer createCustomer(Scanner sc){
-        sc.nextLine();
         System.out.println("고객 등록을 시작합니다. !");
         System.out.print("고객 id를 입력하세요: ");
         String id = sc.nextLine();
