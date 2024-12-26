@@ -32,7 +32,7 @@ public class BankDAO2 {
             if(rs.next()){
                 int id123 = rs.getInt("user_id");
             }else {
-                throw new UserNotFoundException("사용자를 찾을 수 없습니다. 입력한 ID가 잘못되었거나 존재하지 않습니다.");
+                throw new UserNotFoundException("사용자를 찾을 수 없습니다. 입력한 id가 잘못되었거나 존재하지 않습니다.");
             }
 
             System.out.println("입금할 금액을 입력해 주세요");
@@ -46,7 +46,7 @@ public class BankDAO2 {
             if (rs.next()) {
                 balance = rs.getInt("balance");
             }
-            balance += mon;  // Add deposit amount to current balance
+            balance += mon;  
 
             String sql1 = "update account set balance = ?, depositMoney = ?, withDrawMoney = 0 where user_id = ?";
             ps = conn.prepareStatement(sql1);
