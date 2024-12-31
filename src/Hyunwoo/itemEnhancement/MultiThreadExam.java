@@ -26,8 +26,8 @@ public class MultiThreadExam{
     static class EnhanceResult extends Thread{
          public int run(int weoponLevel, int probability){
              synchronized (lock){
-                 int a = (int) (Math.random() * 100) + 1;
-                 if(a>probability){
+                 int a = (int) (Math.random() * 100);
+                 if(a>=probability){
                      try {
                          lock.wait();
                      } catch (InterruptedException e) {
