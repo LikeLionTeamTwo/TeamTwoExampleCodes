@@ -7,10 +7,9 @@ import java.time.YearMonth;
 
 public class PrintCalendar {
     public static void main(String[] args) {
-        // 예시 날짜
         LocalDate date = LocalDate.of(2024, 1, 1); // 2024년 1월 1일 LocalDate 생성
         System.out.println("\t---2024년 달력---" + "\n");
-        while(date.getYear() == 2024){ // 2024 년이 넘어가기 전 까지 반복
+        while(date.getYear() <= 2024){ // 2024 년이 넘어가기 전 까지 반복
             System.out.println("\t\t" + date.getMonth() + "\n"); // 현재 월 출력
             int endDay = YearMonth.of(date.getYear(), date.getMonth()).atEndOfMonth().getDayOfMonth(); // 현재 달의 마지막 날
             System.out.println("일\t월\t화\t수\t목\t금\t토"); // 달력의 컬럼 명 출력
