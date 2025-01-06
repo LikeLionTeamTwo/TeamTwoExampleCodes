@@ -29,4 +29,5 @@ bin/
 .DS_Store
 
 ### Node.js ###
-node_modules/
+src/Eunseo/mypage/node_modules/
+
