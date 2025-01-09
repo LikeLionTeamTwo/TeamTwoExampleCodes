@@ -29,8 +29,7 @@ bin/
 .DS_Store
 
 ### Node.js ###
-src/Eunseo/frontend
 src/Eunseo/frontend/mypage/node_modules/
-src/Eunseo/frontend/newproject/node_modules/
+src/Eunseo/frontend/practice/node_modules/
 
 
